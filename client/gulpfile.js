@@ -72,7 +72,7 @@ gulp.task("lint-prod", function() {
 
 gulp.task("css", function() {
   gulp.src("./css/**/*.css")
-  .pipe(concatcss("react-wa.css"))
+  .pipe(concatcss("pasos.css"))
   .pipe(cssmin())
   .pipe(gulp.dest("./build"));
 });
@@ -145,13 +145,13 @@ function buildScript(file, watch) {
     var stream = bundler.bundle();
     return stream
     .on("error", handleErrors)
-      .pipe(source("react-wa.js"))
+      .pipe(source("pasos.js"))
       .pipe(gulp.dest("./build/"))
       .pipe(buffer())
       // .pipe(uglify({
         // mangle: true
       // }))
-      .pipe(rename("react-wa.js"))
+      .pipe(rename("pasos.js"))
       .pipe(gulp.dest("./build"))
   }
 
@@ -169,11 +169,11 @@ function buildScript(file, watch) {
 gulp.task("src-dev", [
   "lint-dev"
 ], function() {
-  return buildScript("react-wa.jsx", false);
+  return buildScript("pasos.jsx", false);
 });
 
 gulp.task("src-dev-fast", function() {
-  return buildScript("react-wa.jsx", false);
+  return buildScript("pasos.jsx", false);
 });
 
 gulp.task("dev-fast", [
@@ -216,7 +216,7 @@ gulp.task("dev", [
 
 // production
 gulp.task("src-prod", ["lint-prod"], function() {
-  return buildScript("react-wa.jsx", false);
+  return buildScript("pasos.jsx", false);
 });
 
 gulp.task("prod", [
