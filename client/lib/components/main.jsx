@@ -1,6 +1,8 @@
 "use strict";
 
 import React from "react";
+import Title from "./title";
+import Option from "./option";
 
 class Main extends React.Component {
   constructor(props) {
@@ -9,7 +11,8 @@ class Main extends React.Component {
   render() {
     return (
       <div>
-        Hi
+        <Title title="Pasos to the best component ever!!!" />
+        <Option />
       </div>
           );
     }
