@@ -2,6 +2,7 @@
 
 import React from "react";
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import DialogForStepper from "./dialog-f-stepper"; 
 import LinearStepper from "./linear-stepper";
 
 class OptionsForm extends React.Component {
@@ -20,8 +21,10 @@ class OptionsForm extends React.Component {
       <div>
         <MuiThemeProvider>
           <div>
-             <h2 className="subtitle-h2">And here it is</h2>
-             <LinearStepper />
+            <h2 className="subtitle-h2">And here it is</h2>
+            <DialogForStepper>
+              <LinearStepper />
+            </DialogForStepper> 
            </div>
          </MuiThemeProvider>
       </div>
