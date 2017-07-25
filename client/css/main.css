@@ -1,0 +1,10 @@
+.main-form-button {
+  background-color: #f4f4f4;
+  color: #581845;
+  border-radius: 3px;
+  border: 1px solid #c9c9c9;
+  width: 200px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}

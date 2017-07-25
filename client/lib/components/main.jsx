@@ -2,20 +2,42 @@
 
 import React from "react";
 import Title from "./title";
-import Option from "./option";
+import OptionsForm from "./options-form";
+
 
 class Main extends React.Component {
   constructor(props) {
-      super(props);
+    super(props);
+
+    this.state = {
+      showForm: false
     }
+
+    this.toggleForm = this.toggleForm.bind(this);
+  }
+
+  toggleForm() {
+    this.setState({
+      showForm: !this.state.showForm
+    }); 
+  }
+
   render() {
+
+    let form = this.state.showForm ? <OptionsForm /> : null;
+
     return (
       <div>
         <Title title="Pasos to the best component ever!!!" />
-        <Option />
+           <div className="main-form-button" onClick={this.toggleForm}>
+           Welcome to Pasos
+          </div>
+
+       {form}
+        
       </div>
-          );
-    }
+    );
+  }
 }
 
 export default Main;
