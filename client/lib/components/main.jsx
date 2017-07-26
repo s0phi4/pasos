@@ -35,9 +35,7 @@ class Main extends React.Component {
         <MuiThemeProvider>
           <div>
             <Title title="Pasos to the best component ever!!!" />
-            <div className="main-form-button" onClick={this.toggleForm}>
-              Welcome to Pasos
-            </div>
+            <OptionsForm />
 
             {form}
           </div>
