@@ -1,3 +1,5 @@
+"use strict";
+
 import React from 'react';
 import {
   Step,
@@ -57,7 +59,7 @@ class LinearStepper extends React.Component {
             disableTouchRipple={true}
             disableFocusRipple={true}
             primary={true}
-            onTouchTap={this.handleNext}
+            onClick={this.handleNext}
             style={{marginRight: 12}}
           />
           {step > 0 && (
@@ -66,7 +68,7 @@ class LinearStepper extends React.Component {
               disabled={stepIndex === 0}
               disableTouchRipple={true}
               disableFocusRipple={true}
-              onTouchTap={this.handlePrev}
+              onClick={this.handlePrev}
             />
           )}
         </div>

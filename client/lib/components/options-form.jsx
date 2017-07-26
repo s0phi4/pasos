@@ -1,35 +1,64 @@
 "use strict";
 
 import React from "react";
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import DialogForStepper from "./dialog-f-stepper"; 
+import Dialog from "material-ui/Dialog";
+import FlatButton from "material-ui/FlatButton";
+import RaisedButton from "material-ui/RaisedButton";
 import LinearStepper from "./linear-stepper";
 
+/**
+ *  * A modal dialog can only be closed by selecting one of the actions.
+ *   */
 class OptionsForm extends React.Component {
 
   constructor(props) {
     super(props);
 
-    this.state = {
-    }
 
+    this.state = {
+      open: false,
+    };
+
+    this.handleOpen = this.handleOpen.bind(this);
+    this.handleClose = this.handleClose.bind(this);
+  }
+
+  handleOpen() {
+    this.setState({open: true});
+  }
+
+  handleClose() {
+    this.setState({open: false});
   }
 
   render() {
-  
-    return(
+    const actions = [
+      <FlatButton
+        label="Cancel"
+        primary={true}
+        onClick={this.handleClose}
+      />,
+      <FlatButton
+        label="Submit"
+        primary={true}
+        disabled={true}
+        onClick={this.handleClose}
+      />,
+    ];
+
+    return (
       <div>
-        <MuiThemeProvider>
-          <div>
-            <h2 className="subtitle-h2">And here it is</h2>
-            <DialogForStepper>
-              <LinearStepper />
-            </DialogForStepper> 
-           </div>
-         </MuiThemeProvider>
+        <RaisedButton label="Modal Dialog" onClick={this.handleOpen} />
+        <Dialog
+          title="Dialog With Actions"
+          actions={actions}
+          modal={true}
+          open={this.state.open}
+        >
+          <LinearStepper />
+        </Dialog>
       </div>
     );
-
   }
 }
 

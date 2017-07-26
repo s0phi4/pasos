@@ -3,6 +3,10 @@
 import React from "react";
 import Title from "./title";
 import OptionsForm from "./options-form";
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
+injectTapEventPlugin();
 
 
 class Main extends React.Component {
@@ -28,13 +32,16 @@ class Main extends React.Component {
 
     return (
       <div>
-        <Title title="Pasos to the best component ever!!!" />
-           <div className="main-form-button" onClick={this.toggleForm}>
-           Welcome to Pasos
-          </div>
+        <MuiThemeProvider>
+          <div>
+            <Title title="Pasos to the best component ever!!!" />
+            <div className="main-form-button" onClick={this.toggleForm}>
+              Welcome to Pasos
+            </div>
 
-       {form}
-        
+            {form}
+          </div>
+        </MuiThemeProvider>
       </div>
     );
   }
