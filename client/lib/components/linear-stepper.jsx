@@ -1,14 +1,14 @@
 "use strict";
 
-import React from 'react';
+import React from "react";
 import {
   Step,
   Stepper,
   StepLabel,
   StepContent,
-} from 'material-ui/Stepper';
-import RaisedButton from 'material-ui/RaisedButton';
-import FlatButton from 'material-ui/FlatButton';
+} from "material-ui/Stepper";
+import RaisedButton from "material-ui/RaisedButton";
+import FlatButton from "material-ui/FlatButton";
 
 /**
  *  * Vertical steppers are designed for narrow screen sizes. They are ideal for mobile.
