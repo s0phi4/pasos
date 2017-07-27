@@ -9,6 +9,7 @@ import {
 } from "material-ui/Stepper";
 import RaisedButton from "material-ui/RaisedButton";
 import FlatButton from "material-ui/FlatButton";
+import TextFieldStepper from "./text-field-stepper";
 
 /**
  *  * Vertical steppers are designed for narrow screen sizes. They are ideal for mobile.
@@ -84,11 +85,8 @@ class LinearStepper extends React.Component {
             <Step>
               <StepLabel>Select campaign settings</StepLabel>
               <StepContent>
-                <p>
-                  For each ad campaign that you create, you can control how much
-                  you're willing to spend on clicks and conversions, which networks
-                  and geographical locations you want your ads to show on, and more.
-                </p>
+                <TextFieldStepper /> 
+            
                 {this.renderStepActions(0)}
               </StepContent>
             </Step>
