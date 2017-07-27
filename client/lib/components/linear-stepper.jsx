@@ -83,7 +83,7 @@ class LinearStepper extends React.Component {
         <div style={{maxWidth: 380, maxHeight: 400, margin: 'auto'}}>
           <Stepper activeStep={stepIndex} orientation="vertical">
             <Step>
-              <StepLabel>Select campaign settings</StepLabel>
+              <StepLabel>Setup</StepLabel>
               <StepContent>
                 <TextFieldStepper /> 
             

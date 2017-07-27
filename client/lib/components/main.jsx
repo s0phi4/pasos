@@ -34,7 +34,7 @@ class Main extends React.Component {
       <div>
         <MuiThemeProvider>
           <div>
-            <Title title="Pasos to the best component ever!!!" />
+            <Title title="Critical Stack Marketplace" />
             <OptionsForm />
 
             {form}

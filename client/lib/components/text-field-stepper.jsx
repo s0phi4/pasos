@@ -20,27 +20,22 @@ const styles = {
 const TextFieldStepper = () => (
   <div>
     <TextField
-      hintText="Styled Hint Text"
+      hintText="Database Name"
       hintStyle={styles.errorStyle}
     /><br />
     <TextField
-      hintText="Custom error color"
+      hintText="Include extension"
       errorText="This field is required."
       errorStyle={styles.errorStyle}
     /><br />
     <TextField
-      hintText="Custom Underline Color"
+      hintText="Prefix"
       underlineStyle={styles.underlineStyle}
     /><br />
     <TextField
-      hintText="Custom Underline Focus Color"
+      hintText="Version"
       underlineFocusStyle={styles.underlineStyle}
     /><br />
-    <TextField
-      floatingLabelText="Styled Floating Label Text"
-      floatingLabelStyle={styles.floatingLabelStyle}
-      floatingLabelFocusStyle={styles.floatingLabelFocusStyle}
-    />
   </div>
 );
 

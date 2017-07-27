@@ -50,9 +50,9 @@ class OptionsForm extends React.Component {
 
     return (
       <div>
-        <RaisedButton label="Modal Dialog" onClick={this.handleOpen} />
+        <RaisedButton label="App Name" onClick={this.handleOpen} />
         <Dialog
-          title="Dialog With Actions"
+          title="Installation"
           actions={actions}
           modal={true}
           open={this.state.open}
