@@ -5,6 +5,7 @@ import Title from "./title";
 import OptionsForm from "./options-form";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import injectTapEventPlugin from "react-tap-event-plugin";
+import AppsCards from "./apps-cards";
 
 injectTapEventPlugin();
 
@@ -35,8 +36,7 @@ class Main extends React.Component {
         <MuiThemeProvider>
           <div>
             <Title title="Critical Stack Marketplace" />
-            <OptionsForm />
-
+            <AppsCards />
             {form}
           </div>
         </MuiThemeProvider>

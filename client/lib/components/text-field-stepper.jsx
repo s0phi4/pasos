@@ -1,16 +1,16 @@
 import React from 'react';
 import TextField from 'material-ui/TextField';
-import {indigoA200, blue500} from 'material-ui/styles/colors';
+import {purpleA400, blue500} from 'material-ui/styles/colors';
 
 const styles = {
   errorStyle: {
-    color: indigoA200,
+    color: purpleA400,
   },
   underlineStyle: {
-    borderColor: indigoA200,
+    borderColor: purpleA400,
   },
   floatingLabelStyle: {
-    color: indigoA200,
+    color: purpleA400,
   },
   floatingLabelFocusStyle: {
     color: blue500,

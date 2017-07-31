@@ -50,7 +50,7 @@ class OptionsForm extends React.Component {
 
     return (
       <div>
-        <RaisedButton label="App Name" onClick={this.handleOpen} />
+        <RaisedButton className="install-button" label="Install" onClick={this.handleOpen} />
         <Dialog
           title="Installation"
           actions={actions}
