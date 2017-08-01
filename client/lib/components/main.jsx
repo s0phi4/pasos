@@ -1,10 +1,13 @@
 "use strict";
 
 import React from "react";
+import {blue500} from 'material-ui/styles/colors';
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import injectTapEventPlugin from "react-tap-event-plugin";
+import AppBar from 'material-ui/AppBar';
 import Title from "./title";
 import OptionsForm from "./options-form";
-import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-import injectTapEventPlugin from "react-tap-event-plugin";
 import AppsCards from "./apps-cards";
 
 injectTapEventPlugin();
@@ -35,7 +38,14 @@ class Main extends React.Component {
       <div>
         <MuiThemeProvider>
           <div>
-            <Title title="Critical Stack Marketplace" />
+            <AppBar
+              style={{backgroundColor: blue500}}
+              className="cs-navBar"
+              title="Critical Stack Marketplace"
+              iconClassNameRight="muidocs-icon-navigation-expand-more"
+            />
+            <Title title="Apps to maximize your stack potential" />
+            <p>Tools and services for developing, extending, and operating your app.</p>
             <AppsCards />
             {form}
           </div>

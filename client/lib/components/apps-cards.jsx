@@ -15,7 +15,7 @@ class  AppsCards extends React.Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col s6">
+          <div className="col-sm-6">
             <Card>
               <CardTitle title="Card title" subtitle="Card subtitle" />
               <CardText>
@@ -28,7 +28,7 @@ class  AppsCards extends React.Component {
               <OptionsForm />
             </Card>
           </div>
-          <div className="col s6">
+          <div className="col-sm-6">
             <Card>
               <CardTitle title="Card title" subtitle="Card subtitle" />
               <CardText>
