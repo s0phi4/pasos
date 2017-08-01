@@ -1,10 +1,14 @@
 "use strict";
 
 import React from "react";
+
+/*Material-UI */
 import {blue500} from 'material-ui/styles/colors';
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import injectTapEventPlugin from "react-tap-event-plugin";
+
+/*Features */
 import AppBar from 'material-ui/AppBar';
 import Title from "./title";
 import OptionsForm from "./options-form";
