@@ -20,9 +20,9 @@ class  AppsCards extends React.Component {
               <CardTitle title="Card title" subtitle="Card subtitle" />
               <CardText>
                 <CardHeader
-                        title="App Name"
-                                    avatar="images/jsa-128.jpg"
-                                        />
+                  title="App Name"
+                  avatar=""
+                />
               </CardText>
               <OptionsForm />
             </Card>
@@ -69,61 +69,61 @@ class  AppsCards extends React.Component {
 
 
         </div>
-                <div className="row">
-                            <div className="col s12 m3">
-                  <Card>
-                    <CardTitle title="Card title" subtitle="Card subtitle" />
-                    <CardText>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                      mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-                      Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam
-                      sed pellentesque. Aliquam dui mauris, mattis quis lacus id,
-                      pellentesque lobortis odio.
-                    </CardText>
-                    <OptionsForm />
-                                </Card>
-                </div>
-                <div className="col s12 m3">
-                              <Card>
-                                              <CardTitle title="Card title" subtitle="Card subtitle" />
-                                                            <CardText>
-                                                                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                                                                                              mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-                                                                                                              Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam
-                                                                                                                              sed pellentesque. Aliquam dui mauris, mattis quis lacus id,
-                                                                                                                                              pellentesque lobortis odio.
-                                                                                                                                                            </CardText>
-                                                                                                                                                                          <OptionsForm />
-                  </Card>
-                </div>
-                <div className="col s12 m3">
-                              <Card>
-                                              <CardTitle title="Card title" subtitle="Card subtitle" />
-                                                            <CardText>
-                                                                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                                                                                              mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-                                                                                                              Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam
-                                                                                                                              sed pellentesque. Aliquam dui mauris, mattis quis lacus id,
-                                                                                                                                              pellentesque lobortis odio.
-                                                                                                                                                            </CardText>
-                                                                                                                                                                          <OptionsForm />
-                                                                                                                                                                                      </Card>
-                                                                                                                                                                                                </div>
-                                                                                                                                                                                                          <div className="col s12 m3">
-                                                                                                                                                                                                                        <Card>
-                                                                                                                                                                                                                                        <CardTitle title="Card title" subtitle="Card subtitle" />
-                    <CardText>
-                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                                                      mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-                                                                      Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam
-                                                                                      sed pellentesque. Aliquam dui mauris, mattis quis lacus id,
-                                                                                                      pellentesque lobortis odio.
-                                                                                                                    </CardText>
-                                                                                                                                  <OptionsForm />
-                                                                                                                                              </Card>
-                                                                                                                                                        </div>
+        <div className="row">
+          <div className="col s12 m3">
+            <Card>
+              <CardTitle title="Card title" subtitle="Card subtitle" />
+              <CardText>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
+                Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam
+                sed pellentesque. Aliquam dui mauris, mattis quis lacus id,
+                pellentesque lobortis odio.
+              </CardText>
+              <OptionsForm />
+            </Card>
+          </div>
+          <div className="col s12 m3">
+            <Card>
+              <CardTitle title="Card title" subtitle="Card subtitle" />
+              <CardText>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
+                Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam
+                sed pellentesque. Aliquam dui mauris, mattis quis lacus id,
+                pellentesque lobortis odio.
+              </CardText>
+              <OptionsForm />
+            </Card>
+          </div>
+          <div className="col s12 m3">
+            <Card>
+              <CardTitle title="Card title" subtitle="Card subtitle" />
+              <CardText>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
+                Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam
+                sed pellentesque. Aliquam dui mauris, mattis quis lacus id,
+                pellentesque lobortis odio.
+              </CardText>
+              <OptionsForm />
+            </Card>
+          </div>
+          <div className="col s12 m3">
+            <Card>
+              <CardTitle title="Card title" subtitle="Card subtitle" />
+              <CardText>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
+                Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam
+                sed pellentesque. Aliquam dui mauris, mattis quis lacus id,
+                pellentesque lobortis odio.
+              </CardText>
+              <OptionsForm />
+            </Card>
+          </div>
 
-                                                                                                                                                                </div>
+        </div>
       </div>
     );
   }

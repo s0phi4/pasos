@@ -9,6 +9,7 @@ import {
 } from "material-ui/Stepper";
 import RaisedButton from "material-ui/RaisedButton";
 import FlatButton from "material-ui/FlatButton";
+import StepperJsonForm from "./stepper-json-form";
 import TextFieldStepper from "./text-field-stepper";
 
 /**
@@ -19,6 +20,10 @@ import TextFieldStepper from "./text-field-stepper";
  *      *
  *       * <small>(The vertical stepper can also be used without `<StepContent>` to display a basic stepper.)</small>
  *        */
+
+
+
+
 class LinearStepper extends React.Component {
 
   constructor(props) {
@@ -77,28 +82,27 @@ class LinearStepper extends React.Component {
   }
 
   render() {
+
     const {finished, stepIndex} = this.state;
 
     return (
       <div style={{maxWidth: 380, maxHeight: 400, margin: 'auto'}}>
         <Stepper activeStep={stepIndex} orientation="vertical">
           <Step>
-            <StepLabel>Setup</StepLabel>
+            <StepLabel>Details</StepLabel>
             <StepContent>
-              <TextFieldStepper /> 
-
+              <StepperJsonForm />
               {this.renderStepActions(0)}
             </StepContent>
           </Step>
           <Step>
-            <StepLabel>Create an ad group</StepLabel>
+            <StepLabel>Services</StepLabel>
             <StepContent>
-              <TextFieldStepper /> 
               {this.renderStepActions(1)}
             </StepContent>
           </Step>
           <Step>
-            <StepLabel>Create an ad</StepLabel>
+            <StepLabel>Confirmation</StepLabel>
             <StepContent>
               <p>
                 Try out different ad text to see what brings in the most customers,
