@@ -7,7 +7,7 @@ import detailsSchema from "./stepper-schema/details";
 import servicesSchema from "./stepper-schema/services";
 
 
-const hello = "world";
+const onSubmit = ({detailsSchema}) =>console.log("I am valid");
 
 class StepperJsonForm extends React.Component {
   constructor(props) {
@@ -28,7 +28,7 @@ class StepperJsonForm extends React.Component {
       <div>
         <Form schema={this.state.form}
           onChange={this.state.log("changed")}
-          onSubmit={this.state.log("submitted")}
+          onSubmit={onSubmit}
           onError={this.state.log("errors")} />
         <Form schema={this.state.formTwo} />
       </div>
