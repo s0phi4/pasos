@@ -1,12 +1,25 @@
 "static strict"
 
 export default {
-        title: "Sthg here",
-        type: "object",
-        required: ["title"],
-        properties: {
-          title: {type: "string", title: "Title", default: "A new task"},
-          done: {type: "boolean", title: "Done?", default: false}
-        }
+    type: "object",
+    required: [
+      "nameOfBlog",
+      "domain",
+      "port",
+    ],
+    properties: {
+      "nameOfBlog": {type:"string", title: "Name of blog"},
+      "domain": {type: "string", title: "Domain"},
+      "port": {type: "string", title: "Port", maxLength: 4},
+      "sslCertificate": {type: "string", title: "SSL Certificate"},
+
+    }, 
+  uiSchema: {
+    nameOfBlog: {
+      "ui:widget": "textarea",
+    }
+  }
+
+  
 }
 

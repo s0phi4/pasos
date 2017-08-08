@@ -1,6 +1,7 @@
 "use strict";
 
 import React from "react";
+import Form from "react-jsonschema-form";
 import {
   Step,
   Stepper,
@@ -11,18 +12,13 @@ import RaisedButton from "material-ui/RaisedButton";
 import FlatButton from "material-ui/FlatButton";
 import StepperJsonForm from "./stepper-json-form";
 import TextFieldStepper from "./text-field-stepper";
+import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from "material-ui/Card";
 
-/**
- *  * Vertical steppers are designed for narrow screen sizes. They are ideal for mobile.
- *   *
- *    * To use the vertical stepper with the contained content as seen in spec examples,
- *     * you must use the `<StepContent>` component inside the `<Step>`.
- *      *
- *       * <small>(The vertical stepper can also be used without `<StepContent>` to display a basic stepper.)</small>
- *        */
+//Form schemas
+import detailsSchema from "./stepper-schema/details";
+import uiSchema from "./stepper-schema/details";
 
-
-
+const onSubmit = ({detailsSchema}) =>console.log("I am valid");
 
 class LinearStepper extends React.Component {
 
@@ -31,6 +27,8 @@ class LinearStepper extends React.Component {
 
 
     this.state = {
+      form: detailsSchema,
+      uiSchema: uiSchema,
       finished: false,
       stepIndex: 0,
     };
@@ -86,50 +84,90 @@ class LinearStepper extends React.Component {
     const {finished, stepIndex} = this.state;
 
     return (
-      <div style={{maxWidth: 380, maxHeight: 400, margin: 'auto'}}>
+      <div style={{maxWidth: 380, maxHeight: 500, margin: 'auto'}}>
         <Stepper activeStep={stepIndex} orientation="vertical">
           <Step>
-            <StepLabel>Details</StepLabel>
+            <StepLabel>Details</StepLabel>           
             <StepContent>
-              <StepperJsonForm />
-              {this.renderStepActions(0)}
+              <Form className = "nameBlog"
+                schema = {this.state.form}
+                uiSchema = {this.state.uiSchema}
+                onSubmit = {onSubmit} />
+              {this.renderStepActions(0)} 
             </StepContent>
           </Step>
           <Step>
             <StepLabel>Services</StepLabel>
             <StepContent>
-              {this.renderStepActions(1)}
-            </StepContent>
-          </Step>
-          <Step>
-            <StepLabel>Confirmation</StepLabel>
-            <StepContent>
-              <p>
-                Try out different ad text to see what brings in the most customers,
-                and learn how to enhance your ads using features like ad extensions.
-                If you run into any problems with your ads, find out how to tell if
-                they're running and how to resolve approval issues.
-              </p>
-              {this.renderStepActions(2)}
-            </StepContent>
-          </Step>
-        </Stepper>
-        {finished && (
-          <p style={{margin: '20px 0', textAlign: 'center'}}>
-            <a
-              href="#"
-              onClick={(event) => {
-                event.preventDefault();
-                this.setState({stepIndex: 0, finished: false});
-              }}
-            >
-              Click here
-            </a> to reset the example.
-          </p>
-        )}
-      </div>
-    );
+              <div className="container">
+                <div className="row">
+                  <div className="col s12 m3">
+                    <Card>
+                      <CardTitle title="Card title" subtitle="Card subtitle" />
+                      <CardText>
+                        <CardHeader
+                          title="Load Balancer"
+                          avatar=""
+                        />
+                      </CardText>
+                    </Card>
+                  </div>
+                  <div className="col s12 m3">
+                    <Card>
+                      <CardTitle title="Card title" subtitle="Card subtitle" />
+                      <CardText>
+                        <CardHeader
+                          title="Dyno"
+                          avatar=""
+                        />
+                      </CardText>
+                    </Card>
+                  </div>
+                  <div className="col s12 m3">
+                    <Card>
+                      <CardTitle title="Card title" subtitle="Card subtitle" />
+                      <CardText>
+                        <CardHeader 
+                          title = "Metrics"
+                          avatar = ""
+                        />
+                      </CardText>
+                    </Card>
+                  </div>
+    </div>
+  </div>
+    {this.renderStepActions(1)}
+  </StepContent>
+</Step>
+<Step>
+  <StepLabel>Confirmation</StepLabel>
+  <StepContent>
+    <p>
+      Try out different ad text to see what brings in the most customers,
+      and learn how to enhance your ads using features like ad extensions.
+      If you run into any problems with your ads, find out how to tell if
+      they're running and how to resolve approval issues.
+    </p>
+    {this.renderStepActions(2)}
+  </StepContent>
+</Step>
+    </Stepper>
+    {finished && (
+      <p style={{margin: '20px 0', textAlign: 'center'}}>
+        <a
+          href="#"
+          onClick={(event) => {
+            event.preventDefault();
+            this.setState({stepIndex: 0, finished: false});
+          }}
+        >
+          Click here
+        </a> to reset the example.
+      </p>
+    )}
+  </div>
+  );
   }
-}
+  }
 
-export default LinearStepper;
+  export default LinearStepper;
