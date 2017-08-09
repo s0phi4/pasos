@@ -17,6 +17,7 @@ import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from "mat
 //Form schemas
 import detailsSchema from "./stepper-schema/details";
 import uiSchema from "./stepper-schema/details";
+import servicesSchema from "./stepper-schema/services";
 
 const onSubmit = ({detailsSchema}) =>console.log("I am valid");
 
@@ -29,6 +30,7 @@ class LinearStepper extends React.Component {
     this.state = {
       form: detailsSchema,
       uiSchema: uiSchema,
+      formServices: servicesSchema,
       finished: false,
       stepIndex: 0,
     };
@@ -59,7 +61,7 @@ class LinearStepper extends React.Component {
     return (
       <div style={{margin: '12px 0'}}>
         <RaisedButton
-          label={stepIndex === 2 ? 'Finish' : 'Next'}
+          label={stepIndex === 2 ? 'Install' : 'Next'}
           disableTouchRipple={true}
           disableFocusRipple={true}
           primary={true}
@@ -101,7 +103,7 @@ class LinearStepper extends React.Component {
             <StepContent>
               <div className="container">
                 <div className="row">
-                  <div className="col s12 m3">
+                  <div className="col s12 m12">
                     <Card>
                       <CardTitle title="Card title" subtitle="Card subtitle" />
                       <CardText>
@@ -109,48 +111,28 @@ class LinearStepper extends React.Component {
                           title="Load Balancer"
                           avatar=""
                         />
+                        <Form schema = {this.state.formServices} /> 
                       </CardText>
                     </Card>
                   </div>
-                  <div className="col s12 m3">
-                    <Card>
-                      <CardTitle title="Card title" subtitle="Card subtitle" />
-                      <CardText>
-                        <CardHeader
-                          title="Dyno"
-                          avatar=""
-                        />
-                      </CardText>
-                    </Card>
-                  </div>
-                  <div className="col s12 m3">
-                    <Card>
-                      <CardTitle title="Card title" subtitle="Card subtitle" />
-                      <CardText>
-                        <CardHeader 
-                          title = "Metrics"
-                          avatar = ""
-                        />
-                      </CardText>
-                    </Card>
-                  </div>
-    </div>
-  </div>
-    {this.renderStepActions(1)}
-  </StepContent>
-</Step>
-<Step>
-  <StepLabel>Confirmation</StepLabel>
-  <StepContent>
-    <p>
-      Try out different ad text to see what brings in the most customers,
-      and learn how to enhance your ads using features like ad extensions.
-      If you run into any problems with your ads, find out how to tell if
-      they're running and how to resolve approval issues.
-    </p>
-    {this.renderStepActions(2)}
-  </StepContent>
-</Step>
+
+                </div>
+              </div>
+              {this.renderStepActions(1)}
+            </StepContent>
+      </Step>
+      <Step>
+        <StepLabel>Confirmation</StepLabel>
+        <StepContent>
+          <p>
+            Try out different ad text to see what brings in the most customers,
+            and learn how to enhance your ads using features like ad extensions.
+            If you run into any problems with your ads, find out how to tell if
+            they're running and how to resolve approval issues.
+          </p>
+          {this.renderStepActions(2)}
+        </StepContent>
+      </Step>
     </Stepper>
     {finished && (
       <p style={{margin: '20px 0', textAlign: 'center'}}>
@@ -166,8 +148,8 @@ class LinearStepper extends React.Component {
       </p>
     )}
   </div>
-  );
+    );
   }
-  }
+}
 
-  export default LinearStepper;
+export default LinearStepper;

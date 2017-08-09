@@ -49,7 +49,7 @@ class Main extends React.Component {
               iconClassNameRight="muidocs-icon-navigation-expand-more"
             />
             <Title title="Apps to maximize your stack potential" />
-            <p>Tools and services for developing, extending, and operating your app.</p>
+            <p className = "subtitleMain">Tools and services for developing, extending, and operating your app.</p>
             <AppsCards />
             {form}
           </div>

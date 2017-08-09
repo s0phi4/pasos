@@ -1,12 +1,15 @@
 "static strict"
 
 export default {
-        title: "Hello swhere",
         type: "object",
-        required: ["title"],
+        required: ["metrics"],
         properties: {
-          title: {type: "string", title: "Title", default: "A new task"},
-          done: {type: "boolean", title: "Done?", default: false}
-        }
+          metrics: {type: "boolean", title: "Metrics"},
+        },
+  uiSchema: {
+    metrics: {
+    "ui:widget": "radio"
+    }
+  }
 }
 
