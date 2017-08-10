@@ -1,25 +1,15 @@
 "use strict";
 
+// Use stateless component when rendering only HTML content
+
 import React from "react";
 
-class Title extends React.Component {
+const Title = (props) =>  {
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      title:props.title
-    }
-
-  }
-
-  render() {
-  
     return(
-      <h1 className="title-h1">{this.state.title}</h1>
-    );
+      <h1 className="title-h1">{props.title}</h1>
+    )
 
   }
-}
 
 export default Title;

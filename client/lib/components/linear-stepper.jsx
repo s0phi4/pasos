@@ -11,13 +11,14 @@ import {
 import RaisedButton from "material-ui/RaisedButton";
 import FlatButton from "material-ui/FlatButton";
 import StepperJsonForm from "./stepper-json-form";
-import TextFieldStepper from "./text-field-stepper";
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from "material-ui/Card";
 
 //Form schemas
 import detailsSchema from "./stepper-schema/details";
 import uiSchema from "./stepper-schema/details";
 import servicesSchema from "./stepper-schema/services";
+
+import TestComponent from "./test-component";
 
 const onSubmit = ({detailsSchema}) =>console.log("I am valid");
 
@@ -124,12 +125,7 @@ class LinearStepper extends React.Component {
       <Step>
         <StepLabel>Confirmation</StepLabel>
         <StepContent>
-          <p>
-            Try out different ad text to see what brings in the most customers,
-            and learn how to enhance your ads using features like ad extensions.
-            If you run into any problems with your ads, find out how to tell if
-            they're running and how to resolve approval issues.
-          </p>
+          <TestComponent showProp = "Details of installation here" />
           {this.renderStepActions(2)}
         </StepContent>
       </Step>
