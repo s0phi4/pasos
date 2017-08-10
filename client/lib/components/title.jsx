@@ -1,6 +1,7 @@
 "use strict";
 
-// Use stateless component when rendering only HTML content
+// Use stateless functional component when rendering only HTML content to the DOM
+// and when only using a render method.
 
 import React from "react";
 

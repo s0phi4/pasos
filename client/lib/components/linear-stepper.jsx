@@ -38,6 +38,7 @@ class LinearStepper extends React.Component {
 
     this.handleNext = this.handleNext.bind(this);
     this.handlePrev = this.handlePrev.bind(this);
+    this.confirmationDetails = this.confirmationDetails.bind(this);
   }
 
   handleNext() {
@@ -82,6 +83,11 @@ class LinearStepper extends React.Component {
     );
   }
 
+  confirmationDetails(event) {
+    //get info from details in stepper
+    console.log(this.detailsInfo); 
+  }
+
   render() {
 
     const {finished, stepIndex} = this.state;
@@ -94,8 +100,9 @@ class LinearStepper extends React.Component {
             <StepContent>
               <Form className = "nameBlog"
                 schema = {this.state.form}
+                ref = {(input) =>{this.detailsInfo = input}}
                 uiSchema = {this.state.uiSchema}
-                onSubmit = {onSubmit} />
+                onSubmit = {this.confirmationDetails} />
               {this.renderStepActions(0)} 
             </StepContent>
           </Step>
