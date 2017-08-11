@@ -20,7 +20,6 @@ import servicesSchema from "./stepper-schema/services";
 
 import TestComponent from "./test-component";
 
-const onSubmit = ({detailsSchema}) =>console.log("I am valid");
 
 class LinearStepper extends React.Component {
 
@@ -34,11 +33,13 @@ class LinearStepper extends React.Component {
       formServices: servicesSchema,
       finished: false,
       stepIndex: 0,
+
+      blogs: {}
     };
 
     this.handleNext = this.handleNext.bind(this);
     this.handlePrev = this.handlePrev.bind(this);
-    this.confirmationDetails = this.confirmationDetails.bind(this);
+    this.createDetails = this.createDetails.bind(this);
   }
 
   handleNext() {
@@ -83,10 +84,18 @@ class LinearStepper extends React.Component {
     );
   }
 
-  confirmationDetails(event) {
-    //get info from details in stepper
-    console.log(this.detailsInfo); 
+  createDetails(event) {
+      const details = {
+        nameOfBlog: this.nameOfBlog.value
+      }
+    console.log(details);
   }
+
+  addDetails(blog) {
+    const blogs = {...this.state.blogs};
+    this.setState({blogs})
+  }
+
 
   render() {
 
@@ -100,9 +109,9 @@ class LinearStepper extends React.Component {
             <StepContent>
               <Form className = "nameBlog"
                 schema = {this.state.form}
-                ref = {(input) =>{this.detailsInfo = input}}
+                ref = {(input) => this.nameOfBlog = input}
                 uiSchema = {this.state.uiSchema}
-                onSubmit = {this.confirmationDetails} />
+                onSubmit = {this.createDetails} />
               {this.renderStepActions(0)} 
             </StepContent>
           </Step>
