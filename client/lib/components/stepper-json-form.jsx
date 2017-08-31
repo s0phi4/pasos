@@ -28,7 +28,6 @@ class StepperJsonForm extends React.Component {
       <div>
         <Form schema={this.state.form}
           onChange={this.state.log("changed")}
-          onSubmit={onSubmit}
           onError={onError} />
         {/*} <Form schema={this.state.formTwo} />*/}
       </div>

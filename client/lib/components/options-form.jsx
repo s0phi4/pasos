@@ -39,13 +39,7 @@ class OptionsForm extends React.Component {
         label="Cancel"
         primary={true}
         onClick={this.handleClose}
-      />,
-      <FlatButton
-        label="Submit"
-        primary={true}
-        disabled={true}
-        onClick={this.handleClose}
-      />,
+      />
     ];
 
     return (

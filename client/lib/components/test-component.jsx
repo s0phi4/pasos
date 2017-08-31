@@ -5,22 +5,15 @@ import React from "react";
 
 class TestComponent extends React.Component {
   constructor(props) {
-  super(props);
+    super(props);
   }
 
-  showP() {
-    showProp === true ? Yes : No;
-  } 
-
-  showTest() {
-  
-  }
 
   render() {
     return(
       <div>
-        <h1 className = "showProper">{this.props.showProp}</h1>
-        <p>Yes, it is showing!</p>
+        <h1 className="showProper">Show details here</h1>
+        <p>{this.props.formData.domain}</p>
       </div>
     )
   }

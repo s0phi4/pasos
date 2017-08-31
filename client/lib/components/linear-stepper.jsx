@@ -28,6 +28,7 @@ class LinearStepper extends React.Component {
 
 
     this.state = {
+      formData: {},
       form: detailsSchema,
       uiSchema: uiSchema,
       formServices: servicesSchema,
@@ -84,17 +85,21 @@ class LinearStepper extends React.Component {
     );
   }
 
-  createDetails(event) {
-      const details = {
-        nameOfBlog: this.nameOfBlog.value
-      }
-    console.log(details);
+  createDetails(form) {
+    console.log(form);
+      this.setState({
+        formData: form.formData
+      });
+      // const details = {
+        // nameOfBlog: this.nameOfBlog.value
+      // }
+    // console.log(details);
   }
 
-  addDetails(blog) {
-    const blogs = {...this.state.blogs};
-    this.setState({blogs})
-  }
+  // addDetails(blog) {
+    // const blogs = {...this.state.blogs};
+    // this.setState({blogs})
+  // }
 
 
   render() {
@@ -109,9 +114,8 @@ class LinearStepper extends React.Component {
             <StepContent>
               <Form className = "nameBlog"
                 schema = {this.state.form}
-                ref = {(input) => this.nameOfBlog = input}
                 uiSchema = {this.state.uiSchema}
-                onSubmit = {this.createDetails} />
+                onChange = {this.createDetails} />
               {this.renderStepActions(0)} 
             </StepContent>
           </Step>
@@ -141,7 +145,7 @@ class LinearStepper extends React.Component {
       <Step>
         <StepLabel>Confirmation</StepLabel>
         <StepContent>
-          <TestComponent showProp = "Details of installation here" />
+          <TestComponent formData={this.state.formData} />
           {this.renderStepActions(2)}
         </StepContent>
       </Step>
